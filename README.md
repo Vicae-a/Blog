@@ -18,8 +18,8 @@ Ensure you have the following installed on your system:
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-repo/blog-system.git
-   cd blog-system/backend
+   git clone https://github.com/Vicae-a/Blog.git
+   cd Blog/backend
    ```
 
 2. **Install dependencies**
