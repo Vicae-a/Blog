@@ -1,0 +1,132 @@
+/* Navbar Container */
+.navbar {
+    background-color: #455769;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Logo */
+  .navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .navbar .nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-item:hover {
+    color: #ffcc00;
+  }
+  
+  /* Dropdown */
+  .navbar .dropdown {
+    position: relative;
+  }
+  
+  .navbar .dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Menu */
+  .navbar .dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    color: black;
+    width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide initially */
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .navbar .dropdown.open .dropdown-menu {
+    display: flex; /* Show dropdown when open */
+  }
+  
+  .navbar .dropdown-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+  }
+  
+  .navbar .dropdown-item:hover {
+    background: #f1f1f1;
+  }
+  
+  .navbar .logout {
+    color: red;
+  }
+  
+  /* Mobile Menu */
+  .navbar .menu-toggle {
+    display: none;
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .menu-toggle {
+      display: block;
+    }
+  
+    .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background: #3d4e6076;
+      width: 200px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navbar .nav-links.active {
+      display: flex;
+    }
+  }
+  
